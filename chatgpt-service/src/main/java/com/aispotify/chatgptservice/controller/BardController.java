@@ -1,4 +1,4 @@
-package com.aispotify.chatgptservice;
+package com.aispotify.chatgptservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aispotify.chatgptservice.config.GoogleBardConfig;
+import com.aispotify.chatgptservice.service.BardAnswer;
 import com.pkslow.ai.GoogleBardClient;
 import com.pkslow.ai.domain.Answer;
 import com.pkslow.ai.domain.AnswerStatus;

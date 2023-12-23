@@ -1,4 +1,4 @@
-package com.aispotify.chatgptservice;
+package com.aispotify.chatgptservice.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

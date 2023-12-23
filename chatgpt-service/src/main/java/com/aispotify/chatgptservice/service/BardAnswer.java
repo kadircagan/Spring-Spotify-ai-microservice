@@ -1,4 +1,4 @@
-package com.aispotify.chatgptservice;
+package com.aispotify.chatgptservice.service;
 
 import java.util.List;
 

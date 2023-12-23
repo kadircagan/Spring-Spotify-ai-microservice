@@ -1,4 +1,4 @@
-package com.aispotify.playlistconversionservice;
+package com.aispotify.playlistconversionservice.controller;
 
 import java.util.Optional;
 
@@ -14,33 +14,23 @@ import org.springframework.web.bind.annotation.RestController;
 import com.aispotify.playlistconversionservice.model.Playlist;
 import com.aispotify.playlistconversionservice.model.CreatedPlaylist;
 import com.aispotify.playlistconversionservice.model.SpotifyLink;
+import com.aispotify.playlistconversionservice.proxy.AIProxy;
+import com.aispotify.playlistconversionservice.proxy.FetchPlaylistProxy;
 
 @RestController
 public class Router{
+	
 	@Autowired
 	private FetchPlaylistProxy fetchProxy;
+	
 	@Autowired
 	private AIProxy aiProxy;
 	
-	//@Autowired
-	//private Controller service;
-
-
 	@PostMapping("/feigh/fetchAndCreatePlaylist")
 	public EntityModel<CreatedPlaylist> fetchAndCreatePlaylists(@RequestBody SpotifyLink link) {
-        ResponseEntity<?> responseEntity = fetchProxy.fetchPlaylists(link);
-		
-		
+        ResponseEntity<?> responseEntity = fetchProxy.fetchPlaylists(link);	
         int newPlaylistID = aiProxy.createNewPlaylist(link);
-        EntityModel<CreatedPlaylist> resp = aiProxy.retrieveUser(newPlaylistID);//int degeri ile degisecek
-        
+        EntityModel<CreatedPlaylist> resp = aiProxy.retrieveUser(newPlaylistID);//int degeri ile degisecek     
         return resp;
 	}
-	
-	
-	
-	
-	
-	
-	
 }

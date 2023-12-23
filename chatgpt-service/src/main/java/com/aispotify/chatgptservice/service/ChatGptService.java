@@ -1,4 +1,4 @@
-package com.aispotify.chatgptservice;
+package com.aispotify.chatgptservice.service;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -18,6 +18,7 @@ import com.aispotify.chatgptservice.model.Playlist;
 import com.aispotify.chatgptservice.model.Song;
 import com.pkslow.ai.GoogleBardClient;
 import com.pkslow.ai.domain.Answer;
+import com.aispotify.chatgptservice.config.GoogleBardConfig;
 import com.aispotify.chatgptservice.jpa.CreatedPlaylistRepository;
 import com.aispotify.chatgptservice.jpa.NewSongRepository;
 import com.aispotify.chatgptservice.jpa.PlaylistRepository;

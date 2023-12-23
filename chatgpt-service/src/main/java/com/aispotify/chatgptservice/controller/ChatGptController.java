@@ -1,4 +1,4 @@
-package com.aispotify.chatgptservice;
+package com.aispotify.chatgptservice.controller;
 
 import java.util.Map;
 import java.util.Optional;
@@ -12,9 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aispotify.chatgptservice.config.GoogleBardConfig;
 import com.aispotify.chatgptservice.jpa.CreatedPlaylistRepository;
 import com.aispotify.chatgptservice.model.CreatedPlaylist;
 import com.aispotify.chatgptservice.model.SpotifyLink;
+import com.aispotify.chatgptservice.service.BardAnswer;
+import com.aispotify.chatgptservice.service.ChatGptService;
 import com.pkslow.ai.GoogleBardClient;
 import com.pkslow.ai.domain.Answer;
 import com.pkslow.ai.domain.AnswerStatus;
@@ -65,8 +68,6 @@ public class ChatGptController {
 				e.printStackTrace();
 				
 			}
-			
-		   		
 			
 		return savedId;
 	}

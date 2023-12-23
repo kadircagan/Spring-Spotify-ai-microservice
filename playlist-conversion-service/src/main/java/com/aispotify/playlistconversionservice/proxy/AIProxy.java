@@ -1,4 +1,4 @@
-package com.aispotify.playlistconversionservice;
+package com.aispotify.playlistconversionservice.proxy;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.hateoas.EntityModel;

@@ -1,10 +1,12 @@
-package com.aispotify.playlistconversionservice;
+package com.aispotify.playlistconversionservice.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.aispotify.playlistconversionservice.proxy.FetchPlaylistProxy;
 
 
 @RestController

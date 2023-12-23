@@ -1,4 +1,4 @@
-package com.aispotify.fetchplaylistservice.services;
+package com.aispotify.fetchplaylistservice.controller;
 
 
 import java.util.Optional;
@@ -20,6 +20,8 @@ import com.aispotify.fetchplaylistservice.jpa.SongRepository;
 import com.aispotify.fetchplaylistservice.model.FetchPlaylistResponse;
 import com.aispotify.fetchplaylistservice.model.Playlist;
 import com.aispotify.fetchplaylistservice.model.SpotifyLink;
+import com.aispotify.fetchplaylistservice.services.RetrivePlaylistService;
+import com.aispotify.fetchplaylistservice.services.SpotifyAuthService;
 
 @RestController
 public class Router {

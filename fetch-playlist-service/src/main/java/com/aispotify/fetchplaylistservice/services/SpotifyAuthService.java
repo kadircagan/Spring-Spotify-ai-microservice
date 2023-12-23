@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.aispotify.fetchplaylistservice.config.SpotifyApiConfig;
 import com.aispotify.fetchplaylistservice.model.AccessTokenResponse;
 
 @Service
