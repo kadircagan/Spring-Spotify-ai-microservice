@@ -80,7 +80,7 @@ public class ChatGptController {
 			throw new Exception("id:"+id);
 		
 		EntityModel<CreatedPlaylist> entityModel = EntityModel.of(playlist.get());
-		
+
 		
 		return entityModel;
 		
